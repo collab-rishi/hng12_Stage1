@@ -21,7 +21,9 @@ function isArmstrong(num) {
 }
 
 function digitSum(num) {
-    return Math.abs(num).toString().split('').map((item) => Number(item)).reduce((a, b) => a+b, 0);
+    const sum =  Math.abs(num).toString().split('').map((item) => Number(item)).reduce((a, b) => a+b, 0);
+
+    return num < 0 ? -sum : sum;
 }
 
 module.exports = { isPerfect, isPrime, isArmstrong, digitSum }; 
